@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+
+body{
+    background: linear-gradient(130.02deg, #628e75 0.66%, #1a4855 83.32%);
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+
+main {
+    width: 100%;
+    margin-top: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+.titulo{
+    width: 100%;
+}
+
+.descricao{
+    padding: 50px 0px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 28.8px;
+    max-width: 43ch;
+}
+
+.botoes{
+    display: flex;
+    gap: 20px;
+    padding: 50px 0px;
+}
+
+button {
+    background: transparent;
+    border: 4px solid #658e76;
+    color: #100f0f;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    /*responsável por inclinar o botão*/
+    transform: skew(-24deg);
+}
+  
+button:hover {
+    cursor: pointer;
+    background-color: #658e76;
+}
+  
+button p {
+    /*responsável por desinclinar o texto*/
+    transform: skew(24deg);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-flutuando{
+    animation: float 3s ease-in-out infinite;
+    width: 100%;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-50px);
+    }
+}
+
+@media (max-width: 650px){
+    body{
+        height: auto;
+    }
+
+    header{
+        padding: 20px 20px 0px 20px;
+    }
+
+    .menu{
+        gap: 20px;
+    }
+
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    .animacao{
+        grid-row: 1;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .titulo{
+        width: 100%;
+    }
+
+
+    .descricao{
+        padding: 10px 0px;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 28.8px;
+        max-width: auto;
+    }
+
+    .botoes{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px 0px;
+    }
+}
