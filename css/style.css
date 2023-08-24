@@ -99,6 +99,33 @@ button p {
     }
 }
 
+
+@media (max-width: 900px) {
+    body{
+        height: auto;
+    }
+
+    header{
+        padding: 20px 20px 0px 20px;
+    }
+
+
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    .animacao{
+        grid-row: 1;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .titulo{
+        width: 50%;
+    }
+
+}
+
 @media (max-width: 650px){
     body{
         height: auto;
@@ -123,7 +150,7 @@ button p {
     }
 
     .titulo{
-        width: 100%;
+        width: 80%;
     }
 
 
@@ -138,6 +165,6 @@ button p {
     .botoes{
         flex-wrap: wrap;
         justify-content: center;
-        padding: 20px 0px;
+        padding: 40px 0px;
     }
 }
