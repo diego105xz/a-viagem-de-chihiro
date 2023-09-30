@@ -12,42 +12,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     </head>
 <body>
-
-    <header class="container">
-        <img src="img/logo.svg" alt="logo">
-        <nav aria-label="primária">
-            <ul class="menu">
-                <li><a href="https://www.facebook.com/people/A-Viagem-de-Chihiro/100067336604427/"><img src="img/facebook.svg" alt="Facebok"></a></li>
-                <li><a href="https://www.instagram.com/a_viagem_de_chihiro_love/"><img src="img/instagram.svg" alt="Instagram"></a></li>
-                <li><a href="https://twitter.com/GhibliBrasil/status/1478750841129648141"><img src="img/twitter.svg" alt="Twitter"></a></li>
-                <li><a href="https://www.youtube.com/watch?v=SgZI655GgHk"><img src="img/youtube.svg" alt="Youtube"></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <div class="conteudo">
-            <img src="img/Frame.svg" alt="A Viagem de Chihiro" class="titulo">
-
-            <p class="descricao">Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles que a desobedecem são transformados em animais.</p>
-
-            <div class="botoes">
-                <a href="https://www.netflix.com/br/title/60023642" target="_blank" title="Assitir A Viagem de Chihiro">
-                    <button>
-                        <p class="detalhe"><img src="img/play.svg" alt="play">Assistir Agora</p>
-                  </button>
-                </a>
-                <a href="https://www.youtube.com/watch?v=SgZI655GgHk" target="_blank" title="Assitir o trailer A Viagem de Chihiro">
-                    <button>
-                        <p>Assista o trailer</p>
-                  </button>
-                </a>
+    <div id="container">
+        <header>
+            <img src="img/logo.svg" alt="logo">
+            <nav aria-label="primária">
+                <ul>
+                    <li><a href="https://www.facebook.com/people/A-Viagem-de-Chihiro/100067336604427/"><img src="img/facebook.svg" alt="Facebok"></a></li>
+                    <li><a href="https://www.instagram.com/a_viagem_de_chihiro_love/"><img src="img/instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="https://twitter.com/GhibliBrasil/status/1478750841129648141"><img src="img/twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=SgZI655GgHk"><img src="img/youtube.svg" alt="Youtube"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="conteudo">
+                <img src="img/Frame.svg" alt="A Viagem de Chihiro" id="titulo">
+                <p>Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles que a desobedecem são transformados em animais.</p>    
+                <div>
+                    <a href="https://www.netflix.com/br/title/60023642" target="_blank" title="Assitir A Viagem de Chihiro">
+                        <img src="img/play.svg" alt="play">
+                        <span>Assistir Agora</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=SgZI655GgHk" target="_blank" title="Assitir o trailer A Viagem de Chihiro">
+                        <span>Assista o trailer</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="animacao">
-            <img src="img/image.png" alt="chihiro" class="img-flutuando">
-        </div>
-    </main>
-
+            <div id="animacao">
+                <img src="img/image.png" alt="chihiro">
+            </div>
+        </main>
+    </div>
 </body>
 </html>

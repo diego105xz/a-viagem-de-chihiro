@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     color: #fff;
+    font-size: 1rem;
 }
 
 body{
@@ -11,80 +12,102 @@ body{
     font-family: 'Poppins', sans-serif;
     height: 100vh;
 }
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 
-.container{
+#container{
     max-width: 1024px;
+    width: 100%;
     margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-.menu{
-    list-style: none;
+header nav ul{
     display: flex;
     gap: 50px;
 }
 
+header ul li img {
+    transition: transform .4s ease;
+}
+
+header ul li:hover img {
+    transform: translateY(-4px);
+}
 
 main {
-    width: 100%;
-    margin-top: 100px;
+    flex: 1;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
 }
-
-.titulo{
+main #conteudo #titulo{
     width: 100%;
 }
 
-.descricao{
+main #conteudo p{
     padding: 50px 0px;
     font-weight: 400;
-    font-size: 1rem;
     line-height: 28.8px;
     max-width: 43ch;
 }
 
-.botoes{
+main #conteudo div{
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 50px 0px;
+    padding: 20px 0px;
 }
 
-button {
-    background: transparent;
+main #conteudo div a{
     border: 4px solid #658e76;
-    color: #100f0f;
     padding: 10px 20px;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 500;
     /*responsável por inclinar o botão*/
     transform: skew(-24deg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: -7px 8px 8px 1px rgba(0 0 0 /15%);
+    transition: background .5s ease;
 }
-  
-button:hover {
+main #conteudo div a:hover {
     cursor: pointer;
     background-color: #658e76;
-}
-  
-button p {
+    color: #fff;
+} 
+main #conteudo div a span {
     /*responsável por desinclinar o texto*/
     transform: skew(24deg);
     font-weight: 500;
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #c3c3c3;
+    transition: color .5s ease;
 }
-
-.img-flutuando{
+main #conteudo div a:hover span{
+    color: #fff;
+}
+main #animacao{
+    width: 100%;
+}
+main #animacao img{
     animation: float 3s ease-in-out infinite;
     width: 100%;
 }
@@ -93,7 +116,6 @@ button p {
     0%, 100%{
         transform: translateY(0);
     }
-
     50%{
         transform: translateY(-50px);
     }
@@ -101,70 +123,56 @@ button p {
 
 
 @media (max-width: 900px) {
-    body{
-        height: auto;
-    }
-
     header{
         padding: 20px 20px 0px 20px;
     }
 
-
-    main{
-        grid-template-columns: 1fr;
-    }
-
-    .animacao{
+    #animacao{
         grid-row: 1;
         margin: 0 auto;
         width: 50%;
     }
 
-    .titulo{
+    #titulo{
         width: 50%;
     }
 
 }
 
 @media (max-width: 650px){
-    body{
-        height: auto;
-    }
-
     header{
         padding: 20px 20px 0px 20px;
     }
 
-    .menu{
+    header nav ul{
         gap: 20px;
     }
+    #animacao{
+        grid-row: 1;
+        width: 80%;
+    }
 
+    main #conteudo #titulo{
+        width: 80%;
+    }
+
+    main #conteudo p{
+        padding: 10px 0px;
+        font-size: .8rem;
+        font-weight: 400;
+        line-height: 28.8px;
+    }
+
+    main #conteudo div{
+        justify-content: center;
+        padding: 10px 0px;
+    }
+}
+@media (max-width: 420px){
+    body{
+        height: 100%;
+    }
     main{
         grid-template-columns: 1fr;
-    }
-
-    .animacao{
-        grid-row: 1;
-        margin: 0 auto;
-        width: 80%;
-    }
-
-    .titulo{
-        width: 80%;
-    }
-
-
-    .descricao{
-        padding: 10px 0px;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 28.8px;
-        max-width: auto;
-    }
-
-    .botoes{
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 40px 0px;
     }
 }
